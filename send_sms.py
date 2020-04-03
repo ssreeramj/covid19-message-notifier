@@ -19,7 +19,8 @@ def sendPostRequest(reqUrl, apiKey, secretKey, useType, phoneNo, senderId, textM
   return requests.post(reqUrl, req_params)
 
 # get response
-response = sendPostRequest(URL, API_KEY, SECRET_KEY, 'stage', '8451977931', 'SMSIND', short_message)
+mobile_number = '' # Enter 10 digit mobile number
+response = sendPostRequest(URL, API_KEY, SECRET_KEY, 'stage', mobile_number, 'SMSIND', short_message)
 
 # print response if you want
 print(response.text)
